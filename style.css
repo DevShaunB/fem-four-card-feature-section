@@ -92,3 +92,15 @@ ul {
 .accent-blue {
   --clr-accent: hsl(var(--clr-blue-300));
 }
+
+/* BASE */
+body {
+  font-family: var(--ff-sans);
+  padding: 5.25em 2em 4.875em;
+}
+
+h1,
+h2,
+h3 {
+  color: hsl(var(--clr-blue-600));
+}
