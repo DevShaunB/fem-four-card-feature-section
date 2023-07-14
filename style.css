@@ -42,3 +42,53 @@ img {
 ul {
   list-style: none;
 }
+
+/* UTILS */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.font-extralight {
+  font-weight: var(--fw-extra-light);
+}
+
+.bg-white {
+  background-color: hsl(var(--clr-white));
+}
+
+.text-blue-350 {
+  color: hsl(var(--clr-blue-350));
+}
+
+.text-blue-600 {
+  color: hsl(var(--clr-blue-600));
+}
+
+.accent-red {
+  --clr-accent: hsl(var(--clr-red-300));
+}
+
+.accent-cyan {
+  --clr-accent: hsl(var(--clr-cyan-400));
+}
+
+.accent-orange {
+  --clr-accent: hsl(var(--clr-orange-300));
+}
+
+.accent-blue {
+  --clr-accent: hsl(var(--clr-blue-300));
+}
