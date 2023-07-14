@@ -104,3 +104,38 @@ h2,
 h3 {
   color: hsl(var(--clr-blue-600));
 }
+
+/* HEADER */
+.header {
+  margin-bottom: 5em;
+}
+
+.header__title {
+  font-size: 1.25rem;
+}
+
+.header__desc {
+  max-width: 34.7em;
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  margin-top: 1em;
+  margin-inline: auto;
+}
+
+@media screen and (min-width: 22.3em) {
+  /* HEADER */
+  .header__title {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 40em) {
+  /* HEADER */
+  .header {
+    margin-bottom: 4em;
+  }
+
+  .header__title {
+    font-size: 2.25rem;
+  }
+}
