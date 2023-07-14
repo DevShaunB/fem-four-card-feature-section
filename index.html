@@ -1,37 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
-  
-  <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap"
+      rel="stylesheet"
+    />
 
-  <title>Frontend Mentor | Four card feature section</title>
-</head>
-<body>
-  
-  Reliable, efficient delivery
-  Powered by Technology
+    <link rel="stylesheet" href="style.css" />
 
-  Our Artificial Intelligence powered tools use millions of project data points 
-  to ensure that your project is successful
-
-  Supervisor
-  Monitors activity to identify project roadblocks
-
-  Team Builder
-  Scans our talent network to create the optimal team for your project
-
-  Karma
-  Regularly evaluates our talent to ensure quality
-
-  Calculator
-  Uses data from past projects to provide better delivery estimates
-</body>
+    <title>Frontend Mentor | Four card feature section</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header__title">
+        <span>Reliable, efficient delivery</span><br />Powered by Technology
+      </h1>
+      <p class="header__desc">
+        Our Artificial Intelligence powered tools use millions of project data
+        points to ensure that your project is successful
+      </p>
+    </header>
+    <main class="main">
+      <section class="feature-section">
+        <h2 class="feature-section__title">Why Us?</h2>
+        <ul class="feature-section__feature-list">
+          <li class="feature-section__feature-item">
+            <h3 class="feature-section__feature-title">Supervisor</h3>
+            <p class="feature-section__feature-desc">
+              Monitors activity to identify project roadblocks
+            </p>
+            <div class="feature-section__feature-icon-wrapper">
+              <img
+                src="./images/icon-supervisor.svg"
+                alt=""
+                class="feature-section__feature-icon"
+              />
+            </div>
+          </li>
+          <li class="feature-section__feature-item">
+            <h3 class="feature-section__feature-title">Team Builder</h3>
+            <p class="feature-section__feature-desc">
+              Scans our talent network to create the optimal team for your
+              project
+            </p>
+            <div class="feature-section__feature-icon-wrapper">
+              <img
+                src="./images/icon-team-builder.svg"
+                alt=""
+                class="feature-section__feature-icon"
+              />
+            </div>
+          </li>
+          <li class="feature-section__feature-item">
+            <h3 class="feature-section__feature-title">Karma</h3>
+            <p class="feature-section__feature-desc">
+              Regularly evaluates our talent to ensure quality
+            </p>
+            <div class="feature-section__feature-icon-wrapper">
+              <img
+                src="./images/icon-karma.svg"
+                alt=""
+                class="feature-section__feature-icon"
+              />
+            </div>
+          </li>
+          <li class="feature-section__feature-item">
+            <h3 class="feature-section__feature-title">Calculator</h3>
+            <p class="feature-section__feature-desc">
+              Uses data from past projects to provide better delivery estimates
+            </p>
+            <div class="feature-section__feature-icon-wrapper">
+              <img
+                src="./images/icon-calculator.svg"
+                alt=""
+                class="feature-section__feature-icon"
+              />
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+  </body>
 </html>
