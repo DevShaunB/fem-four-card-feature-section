@@ -11,6 +11,13 @@
   --clr-blue-600: 234 12% 34%;
   --clr-blue-350: 229 6% 66%;
   --clr-white: 0 0% 98%;
+
+  /* FONT */
+  --ff-sans: 'Poppins', sans-serif;
+
+  --fw-extra-light: 200;
+  --fw-regular: 400;
+  --fw-semi-bold: 600;
 }
 
 /* RESET */
