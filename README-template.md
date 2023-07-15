@@ -1,6 +1,6 @@
 # Frontend Mentor - Four card feature section solution
 
-This is a solution to the [Four card feature section challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Four card feature section challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -8,15 +8,16 @@ This is a solution to the [Four card feature section challenge on Frontend Mento
   - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
+- [Reference](#reference)
+  - [Color](#color)
+  - [Typography](#typography)
+  - [Font](#font)
+- [Run Locally](#run-locally)
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -28,20 +29,72 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+| ![Four card feature section desktop screenshot](https://devshaunb.github.io/fem-four-card-feature-section/screenshots/desktop.png) |
+|-|
+||
+| ![Four card feature section mobile screenshot](https://devshaunb.github.io/fem-four-card-feature-section/screenshots/mobile.png)   |
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://devshaunb.github.io/fem-four-card-feature-section/](https://devshaunb.github.io/fem-four-card-feature-section/)
+
+## Reference
+
+### Color
+
+#### Primary
+
+- ![hsl(0, 78%, 62%)](https://via.placeholder.com/10/ea5353?text=+) `Red: hsl(0, 78%, 62%)`
+- ![hsl(180, 62%, 55%)](https://via.placeholder.com/10/45d3d3?text=+) `Cyan: hsl(180, 62%, 55%)`
+- ![hsl(34, 97%, 64%)](https://via.placeholder.com/10/fcaf4a?text=+) `Orange: hsl(34, 97%, 64%)`
+- ![hsl(212, 86%, 64%)](https://via.placeholder.com/10/549ef2?text=+) `Blue: hsl(212, 86%, 64%)`
+
+#### Neutral
+
+- ![hsl(234, 12%, 34%)](https://via.placeholder.com/10/4c4e61?text=+) `Very Dark Blue: hsl(234, 12%, 34%)`
+- ![hsl(229, 6%, 66%)](https://via.placeholder.com/10/a3a5ae?text=+) `Grayish Blue: hsl(229, 6%, 66%)`
+- ![hsl(0, 0%, 98%)](https://via.placeholder.com/10/fafafa?text=+) `Very Light Gray: hsl(0, 0%, 98%)`
+
+### Typography
+
+#### Body Copy
+
+- Font size: 15px
+
+### Font
+
+- Family: [Poppins](https://fonts.google.com/specimen/Poppins)
+- Weights: 200, 400, 600
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/DevShaunB/fem-four-card-feature-section.git
+```
+
+Go to the project directory
+
+```bash
+  cd fem-four-card-feature-section
+```
+
+Run `index.html`
+
+```bash
+  <browsername> index.html
+```
+
+E.g.
+
+```bash
+  firefox index.html
+```
+
+```bash
+  google-chrome index.html
+```
 
 ## My process
 
@@ -52,59 +105,67 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
+- used CSS custom properties and pseudo elements for accent border at top of card
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<li class="feature-section__feature-item accent-blue">
+  <!-- card markup -->
+</li>
 ```
+
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.accent-blue {
+  --clr-accent: hsl(var(--clr-blue-300));
+}
+
+.feature-section__feature-item {
+  position: relative;
+  overflow: hidden;
+  /* other styles */
+}
+
+.feature-section__feature-item::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 0.25em;
+  top: 0;
+  left: 0;
+  background-color: var(--clr-accent);
 }
 ```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+
+- used CSS grid
+
+```css
+.feature-section__feature-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(19.4375em, 21.875em));
+  place-content: center;
+  gap: 1.5em;
+}
+
+.feature-section__feature-item {
+  grid-row: 2 / span 2;
+}
+
+.feature-section__feature-item:nth-of-type(2) {
+  grid-row: 1 / span 2;
+}
+
+.feature-section__feature-item:nth-of-type(3) {
+  grid-row: 3 / span 2;
 }
 ```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+- Frontend Mentor - [@DevShaunB](https://www.frontendmentor.io/profile/DevShaunB)
+- Twitter - [@DevShaunB](https://www.twitter.com/DevShaunB)
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- [Four card feature section challenge](https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK) by [Frontend Mentor](https://www.frontendmentor.io/)
