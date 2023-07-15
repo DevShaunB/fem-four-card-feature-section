@@ -30,12 +30,13 @@ Users should be able to:
 ### Screenshot
 
 | ![Four card feature section desktop screenshot](https://devshaunb.github.io/fem-four-card-feature-section/screenshots/desktop.png) |
-|-|
+| - |
 ||
 | ![Four card feature section mobile screenshot](https://devshaunb.github.io/fem-four-card-feature-section/screenshots/mobile.png)   |
 
 ### Links
 
+- Solution URL: [https://www.frontendmentor.io/solutions/four-card-feature-section-using-css-grid-nX1TDYXVwu](https://www.frontendmentor.io/solutions/four-card-feature-section-using-css-grid-nX1TDYXVwu)
 - Live Site URL: [https://devshaunb.github.io/fem-four-card-feature-section/](https://devshaunb.github.io/fem-four-card-feature-section/)
 
 ## Reference
