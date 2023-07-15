@@ -196,6 +196,10 @@ h3 {
   }
 
   /* MAIN */
+  .feature-section__feature-list {
+    gap: 1.875em;
+  }
+
   .feature-section__feature-item {
     min-height: 15.625em;
     padding: 1.9375em 2em 2em;
@@ -210,7 +214,7 @@ h3 {
   }
 }
 
-@media screen and (min-width: 72.6em) {
+@media screen and (min-width: 73.3em) {
   /* MAIN */
   .feature-section__feature-item {
     grid-row: 2 / span 2;
